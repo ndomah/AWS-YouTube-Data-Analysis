@@ -1,7 +1,7 @@
 # AWS YouTube Data Analysis
 ## Project Overview
 - I will be working backwards, from “What does my customer need?”
-- The requirements from the (simulated) customer:
+- **The requirements from the (simulated) customer**:
   - They are launching a new data-driven campaign
   - Their main advertising channel will be on YouTube
   - Initial questions to answer:
