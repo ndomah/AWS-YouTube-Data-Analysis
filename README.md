@@ -43,8 +43,10 @@ These services are integral to the project and will collectively support data pr
 ## Workflow
 1. **Data Ingestion**: Create an S3 Bucket for Raw Data. Upload YouTube data to the S3 bucket using the AWS CLI for efficient data partitioning and organization.
 2. **Data Catalog and Initial Processing**: Utilize AWS Glue Data Catalog to establish a catalog for data. Implement a crawler to catalog both CSV and JSON files. The catalog output feeds into Amazon Athena, where tables within a database are created for data exploration.
+
 ![data catalog](https://github.com/ndomah/AWS-YouTube-Data-Analysis/blob/main/images/data%20catalog.jpeg)
 3. **Data Pre-Processing**: Identify errors in the JSON format (SerDe) file structures. Develop an AWS Lambda function to preprocess and convert JSON files to Parquet format. Configure Lambda to trigger automatically upon data uploads to the S3 bucket. The processed data is stored in a separate S3 bucket and an associated Athena database, allowing schema and data type validation.
+
 ![pre-processing](https://github.com/ndomah/AWS-YouTube-Data-Analysis/blob/main/images/pre-processing.jpeg)
 4. **ETL Processing for CSV Data**: Convert CSV files to Parquet format. Employ AWS Glue ETL job to further process and clean the data. Store the cleaned data in a designated S3 bucket.
 5. **Additional Data Catalog and Database**: Create a second AWS Glue Data Catalog crawler to catalog the cleaned data. Populate a second database with cataloged tables.
