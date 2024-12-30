@@ -39,7 +39,7 @@ These goals collectively aim to establish a data pipeline that can efficiently h
 4. **AWS Glue**: AWS Glue is a serverless data integration service that simplifies the process of discovering, preparing, and combining data for various purposes, including analytics, machine learning, and application development.
 5. **AWS Lambda**: AWS Lambda is a serverless computing service that enables developers to run code without the need to manage servers. It's used for executing code in response to specific events.
 6. **AWS Athena**: AWS Athena is an interactive query service designed for data stored in Amazon S3. It allows users to query data without the need to load it into a separate database; the data remains in S3, making it an efficient choice for querying large datasets.
-These services are integral to our project and will collectively support data processing, storage, analysis, and reporting needs in an efficient and scalable manner.
+These services are integral to the project and will collectively support data processing, storage, analysis, and reporting needs in an efficient and scalable manner.
 ## Workflow
 1. **Data Ingestion**: Create an S3 Bucket for Raw Data. Upload YouTube data to the S3 bucket using the AWS CLI for efficient data partitioning and organization.
 2. **Data Catalog and Initial Processing**: Utilize AWS Glue Data Catalog to establish a catalog for data. Implement a crawler to catalog both CSV and JSON files. The catalog output feeds into Amazon Athena, where tables within a database are created for data exploration.
