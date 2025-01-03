@@ -48,6 +48,7 @@ These services are integral to the project and will collectively support data pr
 3. **Data Pre-Processing**: Identify errors in the JSON format (SerDe) file structures. Develop an AWS Lambda function to preprocess and convert JSON files to Parquet format. Configure Lambda to trigger automatically upon data uploads to the S3 bucket. The processed data is stored in a separate S3 bucket and an associated Athena database, allowing schema and data type validation.
 
 ![pre-processing](https://github.com/ndomah/AWS-YouTube-Data-Analysis/blob/main/images/pre-processing.jpeg)
+
 4. **ETL Processing for CSV Data**: Convert CSV files to Parquet format. Employ AWS Glue ETL job to further process and clean the data. Store the cleaned data in a designated S3 bucket.
 5. **Additional Data Catalog and Database**: Create a second AWS Glue Data Catalog crawler to catalog the cleaned data. Populate a second database with cataloged tables.
 6. **Data Integration and Final Preparation**: Build a new ETL job in AWS Glue to combine and join the cleaned tables. Store the integrated data in the final S3 bucket, ready for analytics.
